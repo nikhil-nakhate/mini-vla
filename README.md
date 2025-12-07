@@ -4,7 +4,7 @@
 
 </div>
 
-mini-VLA is a minimal, beginner-friendly Vision-Language-Action (VLA) model designed to show how modern robot policies can fuse images, text instructions, and robot states to produce continuous actions.
+mini-VLA is a minimal, beginner-friendly Vision-Language-Action (VLA) model designed to show how modern robot policies can fuse images, text instructions, and robot states to produce continuous actions. NOTE: it is far from being production-ready!
 
 <div align="center">
   <img src="./assets/corner2_push.gif" alt="push the object to the goal">

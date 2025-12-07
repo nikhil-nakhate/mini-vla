@@ -21,6 +21,29 @@ The mini-VLA model core is mainly four files: [models/encoders.py](models/encode
 
 Additionally, I provide scripts such as [scripts/collect_data.py](scripts/collect_data.py) to collect data using an expert policy, [scripts/train.py](scripts/train.py) to train the VLA on the collected data, and [scripts/test.py](scripts/test.py) to test VLA-Diffusion Policy's performance (+ save videos).
 
+
+## Getting started
+
+Create (or activate) a conda environment
+
+```
+conda create --name mini-vla python=3.10
+conda activate mini-vla
+```
+
+Clone mini-VLA project
+
+```
+git clone https://github.com/keivalya/mini-vla.git
+cd mini-vla
+```
+
+Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
 ## Collect demonstration data
 
 This gathers trajectories using an expert Meta-World policy and saves them in `.npz` dataset.
@@ -32,7 +55,7 @@ python -m scripts.collect_data \
   --episodes 100 \
   --max-steps 100 \
   --output-path data/metaworld_push_bc.npz
-  ```
+```
 
 ## Train your VLA model
 
@@ -73,7 +96,9 @@ Planning to,
 ## 🙌 Contributing
 
 PRs, improvements, and experiments are welcome! Try adding support for,
+
 - MLP-only vision encoder
 - Online evaluation metrics
 - MT10 / MT50 multi-task training
-much more!
+
+much more! Checkout [mini-vla/issues](https://github.com/keivalya/mini-vla/issues).

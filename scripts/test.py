@@ -81,6 +81,7 @@ def load_model_and_tokenizer(checkpoint_path: str, device: torch.device):
     d_model = ckpt["d_model"]
     diffusion_T = ckpt["diffusion_T"]
 
+    # load vision encoder config
     vision_cfg = None
     if "vision_cfg" in ckpt:
         vision_cfg = VisionEncoderCfg(**ckpt["vision_cfg"])

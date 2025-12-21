@@ -78,6 +78,7 @@ def main():
     state_dim = dataset.states.shape[1]
     action_dim = dataset.actions.shape[1]
 
+    # vision config takes care of loading the correct vision encoder from CLI
     vision_cfg = VisionEncoderCfg(
         name=args.vision_name,
         d_model=args.d_model,
@@ -92,7 +93,7 @@ def main():
         action_dim=action_dim,
         d_model=args.d_model,
         diffusion_T=args.diffusion_T,
-        vision_cfg=vision_cfg,
+        vision_cfg=vision_cfg, # vision encoder config
     ).to(device)
 
     loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=True)
@@ -127,6 +128,7 @@ def main():
             "action_dim": action_dim,
             "d_model": args.d_model,
             "diffusion_T": args.diffusion_T,
+            # save vision encoder config
             "vision_cfg": {
                 "name": vision_cfg.name,
                 "d_model": vision_cfg.d_model,
